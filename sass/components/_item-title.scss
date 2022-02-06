@@ -1,0 +1,50 @@
+.team-member__title {
+  @include font(16px, 500, 1.19, 0.03em);
+  text-align: center;
+  color: var(--title-text-color);
+  margin-bottom: 10px;
+}
+
+.feature__title {
+  @include font(14px, 700, 1.14, 0.03em);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--title-text-color);
+  margin-bottom: 10px;
+  @include desk {
+    @include font(14px, 700, 1.14, 0.03em);
+    text-align: start;
+  }
+  @include tab {
+    @include font(14px, 700, 1.14, 0.03em);
+    text-align: start;
+  }
+}
+
+.footer-subscribe__title {
+  text-align: center;
+  @include font(14px, 700, 1.14, 0.03em);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  @include desk {
+    text-align: start;
+  }
+}
+
+.footer-social__title {
+  text-align: center;
+  @include font(14px, 700, 1.14, 0.03em);
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  margin-bottom: 20px;
+  @include desk {
+    text-align: start;
+  }
+}
+
+.projects-item__title {
+  @include font(18px, 700, 2, 0.06em);
+  color: var(--title-text-color);
+  margin-bottom: 4px;
+}

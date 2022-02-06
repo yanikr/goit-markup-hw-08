@@ -1,0 +1,105 @@
+.clients__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+  @include desk {
+    flex-wrap: nowrap;
+  }
+}
+
+.clients {
+  padding: 60px 0;
+}
+
+.clients__list {
+  flex-basis: calc(100% / 2 - var(--card-set-gap));
+  margin-top: var(--card-set-gap);
+  margin-left: var(--card-set-gap);
+  @include tab {
+    flex-basis: calc(100% / 3 - var(--card-set-gap));
+    margin-top: var(--card-set-gap);
+    margin-left: var(--card-set-gap);
+  }
+  width: 210px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // border: 1px solid var(--clients-border-color);
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: var(--primary-white-color);
+  &:hover,
+  &:focus {
+    svg {
+      fill: var(--svg-accent-color);
+      color: var(--svg-accent-color);
+    }
+  }
+  @include desk {
+    flex-basis: calc(100% / 6 - var(--card-set-gap));
+    margin-top: var(--card-set-gap);
+    margin-left: var(--card-set-gap);
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--clients-border-color);
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: var(--primary-white-color);
+    &:hover,
+    &:focus {
+      svg {
+        fill: var(--svg-accent-color);
+        color: var(--svg-accent-color);
+      }
+    }
+  }
+}
+
+.clients__link {
+  width: 210px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--clients-border-color);
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: var(--primary-white-color);
+  transition: border-color var(--animation);
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    border-color: var(--svg-accent-color);
+    outline: none;
+  }
+  @include desk {
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--clients-border-color);
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: var(--primary-white-color);
+    transition: border-color var(--animation);
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      border-color: var(--svg-accent-color);
+      outline: none;
+    }
+  }
+}
+
+.clients__icon {
+  display: block;
+  fill: var(--primary-svg-color);
+  margin: 16px 32px;
+  transition: fill var(--animation), color var(--animation);
+}

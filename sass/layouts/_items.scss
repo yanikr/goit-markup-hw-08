@@ -1,0 +1,82 @@
+.projects-item__text {
+  @include font(16px, 400, 1.88, 0.03em);
+  color: var(--secondary-text-color);
+}
+
+.projects__wrap {
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+  @include desk {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+}
+
+.projects__item {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  @include tab {
+    flex-basis: calc(100% / 2 - var(--card-set-gap));
+    margin-top: var(--card-set-gap);
+    margin-left: var(--card-set-gap);
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  @include desk {
+    flex-basis: calc(100% / 3 - var(--card-set-gap));
+    margin-top: var(--card-set-gap);
+    margin-left: var(--card-set-gap);
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+  }
+  transition: box-shadow var(--animation);
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+    .project-thumb__text {
+      transform: translateY(0);
+    }
+  }
+}
+
+.projects__content {
+  padding: 20px 24px 20px 24px;
+  border: 1px solid var(--project-thumb-color);
+  border-top: none;
+  @include tab {
+    flex-grow: 1;
+  }
+  @include desk {
+    flex-grow: 0;
+  }
+}
+
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-thumb__text {
+  @include font(18px, 400, 1.56, 0.03em);
+  color: #ffffff;
+  padding: 63px 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms var(--animation);
+}

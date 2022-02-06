@@ -1,0 +1,135 @@
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
+  @include tab {
+    padding-top: 25px;
+  }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  @include tab {
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  color: var(--accent-color);
+  @include font(26px, 700, 1.19, 0.02em);
+}
+
+.header__logo {
+  margin-right: 93px;
+  @include tab {
+    margin-right: 88px;
+  }
+}
+
+.header__logo--span {
+  color: var(--main-text-color);
+}
+
+.navigation {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  display: flex;
+}
+
+.navigation__link {
+  text-decoration: none;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  @include font(14px, 500, 1.14, 0.02em);
+  color: var(--main-text-color);
+  position: relative;
+  transition: color var(--animation);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.current {
+  color: var(--accent-color);
+  &::after {
+    content: "";
+    border: 2px solid var(--accent-color);
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    position: absolute;
+    width: 100%;
+    bottom: -0.5%;
+    left: 0;
+  }
+}
+
+.current-menu {
+  color: var(--accent-color);
+}
+
+.navigation__item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.contacts__link {
+  @include font(14px, 500, 1.14, 0.02em);
+  text-decoration: none;
+  color: var(--secondary-text-color);
+  display: flex;
+  align-items: center;
+  transition: color var(--animation);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.contacts__list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  display: flex;
+  @include tab {
+    flex-direction: column;
+  }
+  @include desk {
+    flex-direction: row;
+  }
+}
+
+.contacts__icon {
+  fill: currentColor;
+  margin-right: 10px;
+  transition: fill var(--animation);
+  &:hover {
+    fill: var(--accent-color);
+  }
+}
+
+.header-contacts {
+  margin-left: auto;
+}
+
+.contacts__item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  @include tab {
+    &:first-child {
+      margin-right: 0;
+    }
+  }
+  @include desk {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}

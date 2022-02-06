@@ -1,0 +1,56 @@
+.team {
+  background-color: var(--secondary-bg-color);
+  padding: 60px 0;
+}
+
+.team__list {
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  @include tab {
+    flex-basis: calc(100% / 2 - var(--card-set-gap));
+    margin-top: var(--card-set-gap);
+    margin-left: var(--card-set-gap);
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+  @include desk {
+    flex-basis: calc(100% / 4 - var(--card-set-gap));
+    margin-top: var(--card-set-gap);
+    margin-left: var(--card-set-gap);
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.team-member__content {
+  padding-top: 30px;
+  padding-bottom: 16px;
+}
+
+.team-member__position {
+  @include font(16px, 400, 1.19, 0.03em);
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+.team__wrap {
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+  @include desk {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+}

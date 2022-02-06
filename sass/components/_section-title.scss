@@ -1,0 +1,49 @@
+.hero__title {
+  @include font(26px, 900, 1.62, 0.06em);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  margin-bottom: 30px;
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  @include tab {
+    max-width: 360px;
+  }
+  @include desk {
+    @include font(44px, 900, 1.36, 0.06em);
+    max-width: 696px;
+  }
+}
+
+.abilities__title {
+  @include font(36px, 700, 1.17, 0.03em);
+  text-align: center;
+  color: var(--title-text-color);
+  margin-bottom: 50px;
+}
+
+.team__title {
+  @include font(36px, 700, 1.17, 0.03em);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  @include desk {
+    margin-bottom: 50px;
+  }
+}
+
+.clients__title {
+  @include font(36px, 700, 1.17, 0.03em);
+  text-align: center;
+  color: var(--title-text-color);
+  margin-bottom: 50px;
+}
+
+.modal__title {
+  @include font(20px, 700, 1.15, 0.03em);
+  text-align: center;
+  color: var(--main-text-color);
+  margin-bottom: 12px;
+}

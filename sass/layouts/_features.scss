@@ -1,0 +1,76 @@
+.feature__text {
+  @include font(14px, 400, 1.71, 0.03em);
+  color: var(--secondary-text-color);
+}
+
+.feature__container {
+  @include tel {
+    margin: 0;
+  }
+}
+
+.feature__thumb {
+  background-color: var(--secondary-bg-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  width: 100%;
+  min-height: 120px;
+  @include desk {
+    height: 120px;
+    width: 270px;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature {
+  background-color: var(--primary-white-color);
+  @include desk {
+    padding: 94px 0;
+  }
+}
+
+.feature__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  @include desk {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.feature__list {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @include tab {
+    margin-top: -30px;
+    margin-left: -30px;
+    flex-basis: calc(100% / 2 - var(--card-set-gap));
+    margin-top: var(--card-set-gap);
+    margin-left: var(--card-set-gap);
+  }
+  @include desk {
+    margin-top: -30px;
+    margin-left: -30px;
+    flex-basis: calc(100% / 4 - var(--card-set-gap));
+    margin-top: var(--card-set-gap);
+    margin-left: var(--card-set-gap);
+  }
+}

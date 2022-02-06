@@ -1,0 +1,111 @@
+.footer__logo--span {
+  text-align: center;
+  color: var(--primary-white-color);
+  @include tab {
+    text-align: center;
+  }
+  @include desk {
+    text-align: start;
+  }
+}
+
+.footer {
+  background-color: var(--hero-bg-color);
+  padding: 60px 0;
+}
+
+.footer__map {
+  color: var(--primary-white-color);
+  @include font(14px, 400, 1.71, 0.03em);
+  text-decoration: none;
+  font-style: normal;
+  margin-bottom: 9px;
+}
+
+.footer-contacts__item {
+  @include font(14px, 400, 1.71, 0.03em);
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color var(--animation);
+  &:not(:last-child) {
+    padding-top: 9px;
+  }
+  &:hover,
+  &:focus {
+    color: var(--primary-white-color);
+  }
+}
+
+.footer__logo {
+  text-align: center;
+  margin-bottom: 20px;
+  @include tab {
+    text-align: center;
+  }
+  @include desk {
+    text-align: start;
+  }
+}
+
+.footer__list {
+  text-align: center;
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  margin-bottom: 60px;
+  @include tab {
+    text-align: center;
+  }
+  @include desk {
+    text-align: start;
+  }
+}
+
+.footer-social__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50px;
+  margin-bottom: 60px;
+}
+
+.footer-subscribe__inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include tab {
+    display: flex;
+    flex-direction: column;
+  }
+  @include desk {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.subscribe-email {
+  min-height: 50px;
+  min-width: 358px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding-left: 16px;
+  margin-right: 12px;
+  margin-bottom: 20px;
+  @include desk {
+    margin-bottom: 0;
+  }
+  outline: none;
+  color: var(--primary-white-color);
+  cursor: pointer;
+  transition: box-shadow var(--animation), border-color var(--animation);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 1);
+  }
+}

@@ -1,0 +1,26 @@
+.filter__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+  margin-left: auto;
+  justify-content: flex-start;
+  padding-bottom: 40px;
+  @include tab {
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+  @include desk {
+    padding-bottom: 50px;
+    justify-content: center;
+  }
+}
+
+.filter__item {
+  margin-bottom: 15px;
+  &:not(:first-child) {
+    margin-left: 8px;
+  }
+  &:nth-child(4n) {
+    margin-left: 0;
+  }
+}

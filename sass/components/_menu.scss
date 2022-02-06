@@ -1,0 +1,130 @@
+@media (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}
+
+.mobile-menu__link {
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.menu-toggle {
+  height: 30px;
+  width: 30px;
+  background-color: var(--primary-white-color);
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  cursor: pointer;
+  transition: transform var(--animation);
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    outline: none;
+    .menu-close__button {
+      fill: var(--accent-color);
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  fill: var(--accent-color);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-white-color);
+  z-index: 999;
+  padding: 48px 40px;
+  transform: translateX(100%);
+  transition: transform var(--animation);
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--main-text-color);
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu__link {
+  display: block;
+  margin-bottom: 32px;
+  @include font(40px, 500, 1.18, 0.02em);
+  text-align: start;
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+.menu-contacts__link {
+  @include font(34px, 500, 1.18, 0.02em);
+  text-decoration: none;
+  color: var(--secondary-text-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.menu-contacts__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &:last-child {
+    margin-bottom: 64px;
+  }
+}
+
+.menu-socials__list {
+  display: flex;
+  justify-content: start;
+}
+
+.menu-socials__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+
+.menu-socials__link {
+  text-decoration: none;
+  color: var(--accent-color);
+  @include font(18px, 500, 1.22, 0.02em);
+}
+
+.menu-navigation__wrap {
+  margin-bottom: auto;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

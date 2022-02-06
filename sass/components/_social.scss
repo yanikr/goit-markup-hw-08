@@ -1,0 +1,70 @@
+.team-member__social {
+  padding-bottom: 24px;
+}
+
+.social__wrap {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  @include desk {
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+.social__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social__link {
+  height: 44px;
+  width: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color var(--animation);
+  &:hover,
+  &:focus {
+    background-color: var(--svg-accent-color);
+    outline: none;
+    .social__icon {
+      fill: var(--primary-white-color);
+    }
+  }
+}
+
+.social__icon {
+  fill: var(--primary-svg-color);
+  display: block;
+  transition: fill var(--animation);
+}
+
+.footer-social__link {
+  height: 44px;
+  width: 44px;
+  flex-basis: calc(100% / 4 - 10px);
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color var(--animation);
+  &:hover,
+  &:focus {
+    background-color: var(--svg-accent-color);
+    outline: none;
+  }
+}
+
+.footer-social__icon {
+  fill: var(--primary-white-color);
+  display: block;
+}
