@@ -10,31 +10,55 @@
 
 .clients {
   padding: 60px 0;
+  @include desk {
+    padding: 94px 0;
+  }
 }
 
 .clients__list {
   flex-basis: calc(100% / 2 - var(--card-set-gap));
   margin-top: var(--card-set-gap);
   margin-left: var(--card-set-gap);
-  @include tab {
-    flex-basis: calc(100% / 3 - var(--card-set-gap));
-    margin-top: var(--card-set-gap);
-    margin-left: var(--card-set-gap);
-  }
+  transition: border-color var(--animation);
+
   width: 210px;
   height: 92px;
   display: flex;
   justify-content: center;
   align-items: center;
   // border: 1px solid var(--clients-border-color);
-  box-sizing: border-box;
-  border-radius: 4px;
+  // box-sizing: border-box;
+  // border-radius: 4px;
   background-color: var(--primary-white-color);
   &:hover,
   &:focus {
     svg {
       fill: var(--svg-accent-color);
       color: var(--svg-accent-color);
+      // border-color: var(--svg-accent-color);
+    }
+  }
+  @include tab {
+    flex-basis: calc(100% / 3 - var(--card-set-gap));
+    margin-top: var(--card-set-gap);
+    margin-left: var(--card-set-gap);
+    width: 226px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid var(--clients-border-color);
+    // box-sizing: border-box;
+    // border-radius: 4px;
+    background-color: var(--primary-white-color);
+    // transition: border-color var(--animation);
+    &:hover,
+    &:focus {
+      svg {
+        fill: var(--svg-accent-color);
+        color: var(--svg-accent-color);
+        // border-color: var(--svg-accent-color);
+      }
     }
   }
   @include desk {
@@ -50,18 +74,20 @@
     box-sizing: border-box;
     border-radius: 4px;
     background-color: var(--primary-white-color);
+    // transition: border-color var(--animation);
     &:hover,
     &:focus {
       svg {
         fill: var(--svg-accent-color);
         color: var(--svg-accent-color);
+        // border-color: var(--svg-accent-color);
       }
     }
   }
 }
 
 .clients__link {
-  width: 210px;
+  width: 226px;
   height: 92px;
   display: flex;
   justify-content: center;
@@ -69,7 +95,6 @@
   border: 1px solid var(--clients-border-color);
   box-sizing: border-box;
   border-radius: 4px;
-  background-color: var(--primary-white-color);
   transition: border-color var(--animation);
   cursor: pointer;
   &:hover,
@@ -86,7 +111,6 @@
     border: 1px solid var(--clients-border-color);
     box-sizing: border-box;
     border-radius: 4px;
-    background-color: var(--primary-white-color);
     transition: border-color var(--animation);
     cursor: pointer;
     &:hover,

@@ -1,6 +1,9 @@
 .team {
   background-color: var(--secondary-bg-color);
   padding: 60px 0;
+  @include desk {
+    padding: 94px 0;
+  }
 }
 
 .team__list {

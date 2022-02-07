@@ -14,6 +14,17 @@
   padding: 60px 0;
 }
 
+.footer__section {
+  margin-bottom: 60px;
+  @include tab {
+    margin-right: 165px;
+  }
+  @include desk {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+}
+
 .footer__map {
   color: var(--primary-white-color);
   @include font(14px, 400, 1.71, 0.03em);
@@ -53,13 +64,19 @@
   &:not(:last-child) {
     margin-bottom: 9px;
   }
-  margin-bottom: 60px;
+
   @include tab {
     text-align: center;
   }
   @include desk {
     text-align: start;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
+}
+.footer-social {
+  margin-bottom: 60px;
 }
 
 .footer-social__wrap {
@@ -69,7 +86,6 @@
   margin-top: -10px;
   margin-left: -10px;
   border-radius: 50px;
-  margin-bottom: 60px;
 }
 
 .footer-subscribe__inputs {

@@ -65,6 +65,9 @@
     flex-basis: calc(100% / 2 - var(--card-set-gap));
     margin-top: var(--card-set-gap);
     margin-left: var(--card-set-gap);
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
   @include desk {
     margin-top: -30px;

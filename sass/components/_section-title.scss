@@ -4,7 +4,7 @@
   text-transform: uppercase;
   color: var(--primary-white-color);
   margin-bottom: 30px;
-  max-width: 696px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
   @include tab {
@@ -24,21 +24,33 @@
 }
 
 .team__title {
-  @include font(36px, 700, 1.17, 0.03em);
+  @include font(28px, 700, 1.18, 0.03em);
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+  @include tab {
+    @include font(28px, 700, 1.18, 0.03em);
+  }
   @include desk {
+    @include font(36px, 700, 1.17, 0.03em);
     margin-bottom: 50px;
   }
 }
 
 .clients__title {
-  @include font(36px, 700, 1.17, 0.03em);
+  @include font(28px, 700, 1.18, 0.03em);
   text-align: center;
   color: var(--title-text-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  @include tab {
+    margin-bottom: 30px;
+    @include font(28px, 700, 1.18, 0.03em);
+  }
+  @include desk {
+    margin-bottom: 50px;
+    @include font(36px, 700, 1.17, 0.03em);
+  }
 }
 
 .modal__title {

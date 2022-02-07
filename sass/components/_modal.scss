@@ -130,11 +130,14 @@
 }
 
 .policy__text {
-  @include font(14px, 400, 1.71, 0.03em);
+  @include font(12px, 400, 1.67, 0.03em);
   color: var(--secondary-text-color);
   display: flex;
   align-items: baseline;
   margin-bottom: 30px;
+  @include desk {
+    @include font(14px, 400, 1.71, 0.03em);
+  }
   .span-icon-check {
     width: 16px;
     height: 15px;

@@ -10,6 +10,10 @@
 .header__container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  @include tel {
+    justify-content: space-between;
+  }
   @include tab {
     justify-content: space-between;
   }
@@ -26,6 +30,9 @@
   margin-right: 93px;
   @include tab {
     margin-right: 88px;
+  }
+  @include desk {
+    margin-right: 93px;
   }
 }
 
@@ -51,6 +58,12 @@
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+  @include tab {
+    padding-bottom: 37px;
+  }
+  @include desk {
+    padding-bottom: 32px;
   }
 }
 
@@ -125,11 +138,15 @@
   @include tab {
     &:first-child {
       margin-right: 0;
+      margin-bottom: 10px;
     }
   }
   @include desk {
     &:not(:last-child) {
       margin-right: 30px;
+    }
+    &:first-child {
+      margin-bottom: 0;
     }
   }
 }
